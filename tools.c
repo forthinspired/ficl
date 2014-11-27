@@ -567,7 +567,7 @@ static ficlInteger ficlStackDisplayCallback(void *c, ficlCell *cell)
 {
     struct stackContext *context = (struct stackContext *)c;
     char buffer[64];
-    sprintf(buffer, "[0x%08x %3d]: %12d (0x%08x)\n", cell, context->count++, cell->i, cell->i);
+    sprintf(buffer, "[0x%p %3d]: %12ld (0x%08lx)\n", cell, context->count++, cell->i, cell->i);
 	ficlVmTextOut(context->vm, buffer);
 	return FICL_TRUE;
 }
@@ -580,7 +580,7 @@ void ficlStackDisplay(ficlStack *stack, ficlStackWalkFunction callback, void *co
 
     FICL_STACK_CHECK(stack, 0, 0);
 
-	sprintf(buffer, "[%s stack has %d entries, top at 0x%08x]\n", stack->name, ficlStackDepth(stack), stack->top);
+	sprintf(buffer, "[%s stack has %d entries, top at 0x%p]\n", stack->name, ficlStackDepth(stack), stack->top);
 	ficlVmTextOut(vm, buffer);
 
     if (callback == NULL)
@@ -592,7 +592,7 @@ void ficlStackDisplay(ficlStack *stack, ficlStackWalkFunction callback, void *co
     }
 	ficlStackWalk(stack, callback, context, FICL_FALSE);
 
-	sprintf(buffer, "[%s stack base at 0x%08x]\n", stack->name, stack->base);
+	sprintf(buffer, "[%s stack base at 0x%p]\n", stack->name, stack->base);
 	ficlVmTextOut(vm, buffer);
 
     return;
@@ -612,7 +612,7 @@ static ficlInteger ficlStackDisplaySimpleCallback(void *c, ficlCell *cell)
 {
     struct stackContext *context = (struct stackContext *)c;
     char buffer[32];
-    sprintf(buffer, "%s%d", context->count ? " " : "", cell->i);
+    sprintf(buffer, "%s%ld", context->count ? " " : "", cell->i);
     context->count++;
     ficlVmTextOut(context->vm, buffer);
 	return FICL_TRUE;
@@ -644,7 +644,7 @@ static ficlInteger ficlReturnStackDisplayCallback(void *c, ficlCell *cell)
     struct stackContext *context = (struct stackContext *)c;
     char buffer[128];
 
-    sprintf(buffer, "[0x%08x %3d] %12d (0x%08x)", cell, context->count++, cell->i, cell->i);
+    sprintf(buffer, "[0x%p %3d] %12ld (0x%08lx)", cell, context->count++, cell->i, cell->i);
 
     /*
     ** Attempt to find the word that contains the return

@@ -695,7 +695,7 @@ void ficlDictionarySee(ficlDictionary *dictionary, ficlWord *word, ficlCallback 
             case FICL_WORDKIND_2LITERAL:
                 c = *++cell;
                 c2 = *++cell;
-                sprintf(trace, "2literal %d %d (%#lx %#lx)", c2.i, c.i, c2.u, c.u);
+                sprintf(trace, "2literal %ld %ld (%#lx %#lx)", c2.i, c.i, c2.u, c.u);
                 break;
 #if FICL_WANT_FLOAT
             case FICL_WORDKIND_FLITERAL:
