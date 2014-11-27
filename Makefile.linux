@@ -2,7 +2,7 @@ OBJECTS= dictionary.o system.o fileaccess.o float.o double.o prefix.o search.o s
 HEADERS= ficl.h ficlplatform/unix.h
 #
 # Flags for shared library
-TARGET= -Dlinux -Wno-comment # riscos MOTO_CPU32 
+TARGET= -Dlinux -Wno-switch -Wno-comment # riscos MOTO_CPU32 
 SHFLAGS = -fPIC
 CFLAGS= -O -c $(SHFLAGS) $(TARGET)
 CC=clang -B/usr/lib32 -m32
