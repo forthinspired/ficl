@@ -1,4 +1,5 @@
 #include "ficl.h"
+#include <ctype.h>
 
 
 #define FICL_ASSERT_PHASH(hash, expression) FICL_ASSERT(NULL, expression)
