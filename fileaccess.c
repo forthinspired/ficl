@@ -113,7 +113,7 @@ static void ficlPrimitiveDeleteFile(ficlVm *vm) /* ( c-addr u -- ior ) */
     memcpy(filename, address, length);
     filename[length] = 0;
 
-    pushIor(vm, !unlink(filename));
+    pushIor(vm, !remove(filename));
 	free(filename);
 }
 
