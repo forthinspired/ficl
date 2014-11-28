@@ -5,6 +5,7 @@ HEADERS= ficl.h ficlplatform/unix.h
 TARGET= -Dlinux -std=gnu89 -Wall -Wno-switch -Wno-comment # riscos MOTO_CPU32 
 SHFLAGS = -fPIC
 CFLAGS= -g -c $(SHFLAGS) $(TARGET)
+COPTFLAGS= -O
 CC=clang -m32
 LIB = ar cr
 RANLIB = ranlib
@@ -40,11 +41,14 @@ unix.o: ficlplatform/unix.c $(HEADERS)
 #
 .SUFFIXES: .cxx .cc .c .o
 
-.c.o:
+vm.o: vm.c
 	$(CC) $(CFLAGS) -c $*.c
 
+.c.o:
+	$(CC) $(COPTFLAGS) $(CFLAGS) -c $*.c
+
 .cxx.o:
-	$(CPP) $(CPFLAGS) -c $*.cxx
+	$(CPP) $(COPTFLAGS) $(CPFLAGS) -c $*.cxx
 
 .cc.o:
 	$(CPP) $(CPFLAGS) -c $*.cc
