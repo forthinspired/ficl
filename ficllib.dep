@@ -1,0 +1,170 @@
+# Microsoft Developer Studio Generated Dependency File, included by ficllib.mak
+
+.\bit.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\callback.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\compatibility.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficlcompatibility.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+dictionary.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+double.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\extras.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+fileaccess.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+float.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\hash.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\lzuncompress.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+prefix.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\primitives.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+search.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+softcore.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+stack.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\system.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+tools.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\utility.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+vm.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\ficlplatform\win32.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
+
+.\word.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	

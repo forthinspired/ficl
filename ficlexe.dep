@@ -1,0 +1,9 @@
+# Microsoft Developer Studio Generated Dependency File, included by ficlexe.mak
+
+.\main.c : \
+	"..\..\..\program files\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\ficl.h"\
+	".\ficllocal.h"\
+	".\ficlplatform\win32.h"\
+	".\ficltokens.h"\
+	
