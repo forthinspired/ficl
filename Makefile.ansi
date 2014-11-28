@@ -4,7 +4,7 @@ HEADERS= ficl.h ficlplatform/ansi.h
 # Flags for shared library
 TARGET=  -ansi -Wall -Wno-switch -Wno-comment -DFICL_ANSI  # riscos MOTO_CPU32 
 SHFLAGS = -fPIC
-CFLAGS= -O $(SHFLAGS) $(TARGET)
+CFLAGS= $(SHFLAGS) $(TARGET)
 CC=clang -m32
 LIB = ar cr
 RANLIB = ranlib
