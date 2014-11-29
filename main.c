@@ -47,6 +47,7 @@ int main(int argc, char **argv)
 {
     int returnValue = 0;
     char buffer[256];
+    char *gotline;
     ficlVm *vm;
 	ficlSystem *system;
 
@@ -68,8 +69,8 @@ int main(int argc, char **argv)
     while (returnValue != FICL_VM_STATUS_USER_EXIT)
     {
 	    fputs(FICL_PROMPT, stdout);
-        if (fgets(buffer, sizeof(buffer), stdin) == NULL) break;
-        returnValue = ficlVmEvaluate(vm, buffer);
+        gotline = fgets(buffer, sizeof(buffer), stdin);
+        returnValue = ficlVmEvaluate(vm, gotline);
     }
 
     ficlSystemDestroy(system);

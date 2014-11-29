@@ -2666,6 +2666,8 @@ int ficlVmEvaluate(ficlVm *vm, char *s)
     ficlCell id = vm->sourceId;
 	ficlString string;
     vm->sourceId.i = -1;
+    if (s == NULL)
+        return FICL_VM_STATUS_USER_EXIT;
 	FICL_STRING_SET_FROM_CSTRING(string, s);
     returnValue = ficlVmExecuteString(vm, string);
     vm->sourceId = id;
