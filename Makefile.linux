@@ -42,7 +42,7 @@ unix.o: ficlplatform/unix.c $(HEADERS)
 .SUFFIXES: .cxx .cc .c .o
 
 vm.o: vm.c
-	$(CC) $(CFLAGS) -c $*.c
+	$(CC) $(COPTFLAGS) $(CFLAGS) -c $*.c
 
 .c.o:
 	$(CC) $(COPTFLAGS) $(CFLAGS) -c $*.c

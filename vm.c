@@ -280,11 +280,11 @@ void ficlVmInnerLoop(ficlVm *vm, ficlWord *fw)
 	if (once)
 		count = 1;
 
-	LOCAL_VARIABLE_REFILL;
 
     oldExceptionHandler = vm->exceptionHandler;
     vm->exceptionHandler = &exceptionHandler; /* This has to come before the setjmp! */
     except = setjmp(exceptionHandler);
+    LOCAL_VARIABLE_REFILL;
 
 	if (except)
 		{
