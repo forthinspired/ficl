@@ -57,6 +57,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <signal.h>
 #include "ficl.h"
 
 
@@ -93,6 +94,21 @@ static void ficlSystemSetVersion(ficlSystem *system)
 }
 
 
+/**************************************************************************
+                        f i c l C r a s h
+** Handle segmentation faults
+**************************************************************************/
+static void
+ficlCrash(int sig)
+{
+    ficlVm *vm;
+    signal(sig, SIG_DFL);
+    for (vm = ficlSystemGlobal->vmList; vm != NULL; vm = vm->link)
+    {
+        ficlVmThrowError(vm, "Segmentation fault");
+    }
+    signal(sig, ficlCrash);
+}
 
 
 
@@ -197,6 +213,7 @@ ficlSystem *ficlSystemCreate(ficlSystemInformation *fsi)
 #endif /* FICL_WANT_PLATFORM */
 
     ficlSystemSetVersion(system);
+    signal(SIGSEGV, ficlCrash);
 
     /*
     ** Establish the parse order. Note that prefixes precede numbers -
@@ -280,6 +297,7 @@ void ficlSystemDestroy(ficlSystem *system)
         ficlVmDestroy(vm);
     }
 
+    signal(SIGSEGV, SIG_DFL);
     ficlFree(system);
     system = NULL;
 
