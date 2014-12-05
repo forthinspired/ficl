@@ -102,12 +102,10 @@ static void
 ficlCrash(int sig)
 {
     ficlVm *vm;
-    signal(sig, SIG_DFL);
     for (vm = ficlSystemGlobal->vmList; vm != NULL; vm = vm->link)
     {
         ficlVmThrowError(vm, "Segmentation fault");
     }
-    signal(sig, ficlCrash);
 }
 
 
